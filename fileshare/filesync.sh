@@ -1,4 +1,6 @@
 #!/bin/bash
+set -x
+
 mkdir ~/shared_data/
 #mkdir ~/shared_data/client_data/
 #export DATAHOST=sudarsun@hendrix.cc.gt.atl.ga.us
@@ -6,4 +8,4 @@ mkdir ~/shared_data/
 
 echo "make sure to export DATAHOST"
 
-rsync $DATAHOST:~/shared_data ~/shared_data
+rsync -rv $DATAHOST:~/shared_data/* ~/shared_data/
